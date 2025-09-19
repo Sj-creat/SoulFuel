@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+:root {
+  --gold: #ffd700;
+}
+
+.text-gold {
+  color: var(--gold);
+}
+
