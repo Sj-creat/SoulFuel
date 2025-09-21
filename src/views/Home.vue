@@ -33,10 +33,10 @@ useHead({
 
       <!-- Desktop nav -->
       <ul class="hidden md:flex space-x-8 text-gray-300 font-medium">
-        <li><a href="#home" class="hover:text-gold transition">Home</a></li>
-        <li><a href="#features" class="hover:text-gold transition">Features</a></li>
-        <li><a href="#about" class="hover:text-gold transition">About</a></li>
-        <li><a href="#get-started" class="hover:text-gold transition">Get started</a></li>
+        <li><a href="#home" class="hover:text-[#ffd700] transition">Home</a></li>
+        <li><a href="#features" class="hover:text-[#ffd700] transition">Features</a></li>
+        <li><a href="#about" class="hover:text-[#ffd700] transition">About</a></li>
+        <li><a href="#get-started" class="hover:text-[#ffd700] transition">Get started</a></li>
       </ul>
 
       <!-- Mobile toggle -->
@@ -60,10 +60,10 @@ useHead({
       </button>
 
       <nav class="mt-12 space-y-4">
-        <a href="#home" class="block hover:text-gold" @click="mobileOpen = false">Home</a>
-        <a href="#features" class="block hover:text-gold" @click="mobileOpen = false">Features</a>
-        <a href="#about" class="block hover:text-gold" @click="mobileOpen = false">About</a>
-        <a href="#get-started" class="block hover:text-gold" @click="mobileOpen = false">Get started</a>
+        <a href="#home" class="block hover:text-[#ffd700]" @click="mobileOpen = false">Home</a>
+        <a href="#features" class="block hover:text-[#ffd700]" @click="mobileOpen = false">Features</a>
+        <a href="#about" class="block hover:text-[#ffd700]" @click="mobileOpen = false">About</a>
+        <a href="#get-started" class="block hover:text-[#ffd700]" @click="mobileOpen = false">Get started</a>
       </nav>
     </div>
   </transition>
@@ -114,6 +114,36 @@ useHead({
         <p class="text-[#f5f5f5]">
           Connect with like-minded people and grow together in purpose
         </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="relative bg-[#1f2937] py-20 px 6 md:px-12 lg:px-24">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-[#4a5d8e] mb-6">
+        About <span class="text-gold">SoulFuel</span>
+      </h2>
+      <p class="text-lg text-gray-300 leading-relaxed mb-6">
+        SoulFuel is more than just a platform — it’s a movement. 
+        Our mission is to <span class="font-semibold text-[#4a5d8e]">fuel your spirit</span> with 
+        daily inspiration, purposeful living, and uplifting content. 
+      </p>
+      <p class="text-lg text-gray-300 leading-relaxed mb-6">
+        Whether you’re seeking motivation, spiritual guidance, or a 
+        community of like-minded individuals, SoulFuel is here to 
+        help you <span class="font-semibold text-gold">ignite your passion</span> 
+        and walk in purpose.
+      </p>
+      <a href="#get-started" 
+         class="inline-block bg-[#4a5d8e] text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-gold hover:text-[#ffd700] transition">
+        Get Started
+      </a>
+      </div>
+
+      <!-- Image / Illustration -->
+      <div class="flex justify-center md:justify-end">
+        <img src="../assets/logo.png" alt="About SoulFuel" class="rounded-2xl shadow-lg max-w-sm md:max-w-md lg:max-w-lg">
       </div>
     </div>
   </section>
