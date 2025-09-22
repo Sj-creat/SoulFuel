@@ -8,3 +8,6 @@
   color: var(--gold);
 }
 
+*{
+  scroll-behavior: smooth;
+}

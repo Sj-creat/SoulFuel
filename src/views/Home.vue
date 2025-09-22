@@ -70,7 +70,7 @@ useHead({
 
 
   <!-- hero -->
-  <section class="min-h-screen flex flex-col items-center justify center text-center px-4 bg-[#10172a] pt-25">
+  <section id="home" class="min-h-screen flex flex-col items-center justify center text-center px-4 bg-[#10172a] pt-25">
     <h1 class="text-3xl font-extrabold text-gold mb-4">
         {{ title }}
     </h1>
@@ -79,7 +79,7 @@ useHead({
     </p>
   </section>
   <!-- features section  -->
-  <section class="py-16 bg-[#10172a] text-center" >
+  <section id="features" class="py-16 bg-[#10172a] text-center" >
     <h2 class="text-3xl font-bold text-bold mb-10 text-gold">What SoulFuel Offers</h2>
 
     <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-2 px-6 max-w-6xl mx-auto">
