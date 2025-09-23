@@ -3,6 +3,8 @@ import { ref } from 'vue'
 import { useHead } from '@vueuse/head'
 import { BookOpenIcon, MusicalNoteIcon, UsersIcon, FireIcon, Bars3Icon, XMarkIcon } from '@heroicons/vue/24/solid'
 import Home from '@/views/Home.vue'
+import heroBgDesktop from '@/assets/soul o.png'
+import heroBgMobile from '@/assets/try.jpg'
 
 const title = ref("SoulFuel")
 const subtitle = ref("Fuel your spirit with daily inspiration, purposeful living, and uplifting content.")
@@ -69,14 +71,38 @@ useHead({
   </transition>
 
 
-  <!-- hero -->
-  <section id="home" class="min-h-screen flex flex-col items-center justify center text-center px-4 bg-[#10172a] pt-25">
-    <h1 class="text-3xl font-extrabold text-gold mb-4">
-        {{ title }}
-    </h1>
-    <p class="text-lg text-gray-300 max-w-xl">
+  <!-- Hero Section -->
+  <section
+    id="home"
+    class="relative min-h-screen flex items-center justify-center text-center text-white overflow-hidden"
+  >
+    <!-- Background -->
+    <div
+      class="absolute inset-0 bg-cover bg-center bg-no-repeat animate-zoom hidden sm:block"
+      :style="{ backgroundImage: `url(${heroBgDesktop})` }"
+    ></div>
+
+    <div
+      class="absolute inset-0 bg-cover w-full bg-center bg-no-repeat animate-zoom block sm:hidden"
+      :style="{ backgroundImage: `url(${heroBgMobile})` }"
+    ></div>
+
+    <!-- Dark overlay for readability -->
+    <div class="absolute inset-0  bg-opacity-50"></div>
+
+    <!-- Texts -->
+    <div class="relative z-10 max-w-2xl px-4">
+      
+      <p class="text-base sm:text-lg lg:text-xl mb-8 pt-80">
         {{ subtitle }}
-    </p>
+      </p>
+      <a
+        href="#get-started"
+        class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition duration-300"
+      >
+        Get Started &rarr;
+      </a>
+    </div>
   </section>
   <!-- features section  -->
   <section id="features" class="py-16 bg-[#10172a] text-center" >
@@ -157,4 +183,18 @@ useHead({
 .fade-enter-from, .fade-leave-to {
   opacity: 0;
 }
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.animate-zoom {
+  animation: zoom 10s ease-in-out infinite alternate;
+}
+
 </style> 
