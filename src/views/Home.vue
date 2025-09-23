@@ -4,7 +4,7 @@ import { useHead } from '@vueuse/head'
 import { BookOpenIcon, MusicalNoteIcon, UsersIcon, FireIcon, Bars3Icon, XMarkIcon } from '@heroicons/vue/24/solid'
 import Home from '@/views/Home.vue'
 import heroBgDesktop from '@/assets/soul o.png'
-import heroBgMobile from '@/assets/try.jpg'
+import heroBgMobile from '@/assets/soul om.png'
 
 const title = ref("SoulFuel")
 const subtitle = ref("Fuel your spirit with daily inspiration, purposeful living, and uplifting content.")
@@ -173,7 +173,60 @@ useHead({
       </div>
     </div>
   </section>
+  <!-- Get started section -->
+  <section id="get-started" class="relative py-20 bg-[#10172a] text-white text-center">
+    <div class="max-w-3xl mx-auto px-6">
+    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gold">Fuel Your Journey</h2>
+    <p class="text-lg md:text-xl mb-8">
+      Join SoulFuel today and unlock daily inspiration, spiritual growth, and a community of like-minded individuals. 
+      It’s time to live with purpose!
+    </p>
+    <a 
+      href="/signup" 
+      class="inline-block bg-white text-yellow-600 font-semibold py-3 px-8 rounded-lg shadow-lg hover:text-gold transition duration-300"
+    >
+      Get Started Now &rarr;
+    </a>
+  </div>
+  </section>
   <!-- footer  -->
+  <footer class="bg-gray-700 text-gray-300 py-10">
+  <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+    <!-- About -->
+    <div>
+      <h3 class="text-xl font-semibold text-gold mb-4">SoulFuel</h3>
+      <p class="text-sm">
+        Fueling your spirit with daily inspiration, purposeful living, and uplifting content.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h3 class="text-xl font-semibold text-gold mb-4">Quick Links</h3>
+      <ul class="space-y-2">
+        <li><a href="#home" class="hover:text-yellow-500">Home</a></li>
+        <li><a href="#get-started" class="hover:text-yellow-500">Get Started</a></li>
+        <li><a href="#about" class="hover:text-yellow-500">About</a></li>
+        <li><a href="#contact" class="hover:text-yellow-500">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Socials -->
+    <div>
+      <h3 class="text-xl font-semibold text-gold mb-4">Connect With Us</h3>
+      <div class="flex justify-center md:justify-start space-x-4">
+        <a href="#" class="hover:text-yellow-500">Facebook</a>
+        <a href="#" class="hover:text-yellow-500">Twitter</a>
+        <a href="#" class="hover:text-yellow-500">Instagram</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-10 text-center text-gray-300 text-sm">
+    © 2025 SoulFuel. All rights reserved. <br>
+    Powered by YouthWithPurpose🔥
+  </div>
+</footer>
 </template>
 
  <style>
