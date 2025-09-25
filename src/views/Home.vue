@@ -5,10 +5,13 @@ import { BookOpenIcon, MusicalNoteIcon, UsersIcon, FireIcon, Bars3Icon, XMarkIco
 import Home from '@/views/Home.vue'
 import heroBgDesktop from '@/assets/soul o.png'
 import heroBgMobile from '@/assets/soul om.png'
+import Registration from '@/components/icons/Registration.vue'
+
 
 const title = ref("SoulFuel")
 const subtitle = ref("Fuel your spirit with daily inspiration, purposeful living, and uplifting content.")
 const mobileOpen = ref(false)
+const showModal = ref(false)
 
 // SEO tags
 useHead({
@@ -181,14 +184,15 @@ useHead({
       Join SoulFuel today and unlock daily inspiration, spiritual growth, and a community of like-minded individuals. 
       It’s time to live with purpose!
     </p>
-    <a 
+    <button @click="showModal=true"
       href="/signup" 
       class="inline-block bg-white text-yellow-600 font-semibold py-3 px-8 rounded-lg shadow-lg hover:text-gold transition duration-300"
     >
       Get Started Now &rarr;
-    </a>
+    </button>
   </div>
   </section>
+  <registration :is-open="showModal" @close="showModal = false"/>
   <!-- footer  -->
   <footer class="bg-gray-700 text-gray-300 py-10">
   <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
@@ -217,7 +221,7 @@ useHead({
       <div class="flex justify-center md:justify-start space-x-4">
         <a href="#" class="hover:text-yellow-500">Facebook</a>
         <a href="#" class="hover:text-yellow-500">Twitter</a>
-        <a href="#" class="hover:text-yellow-500">Instagram</a>
+        <a href="https://www.instagram.com/youthwithpurpose25/" class="hover:text-yellow-500">Instagram</a>
       </div>
     </div>
   </div>
